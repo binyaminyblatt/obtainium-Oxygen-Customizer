@@ -38,53 +38,68 @@ jobs:
               uses: hkusu/apk-info-action@v1
               with:
                   apk-path: ${{ env.apk-path }}
-
-            - name: Commit Changes
+            - name: Show apk info
               run: |
-                  git config --global user.email "apk-artifacts-downloader@github.com"
-                  git config --global user.name "${{ github.repository_owner }}"
-                  git add .
-                  git commit -m "Update ${{ env.repo-title }} to latest version"
+                echo '${{ steps.apk-info.outputs.application-name }}'
+                echo '${{ steps.apk-info.outputs.application-id }}'
+                echo '${{ steps.apk-info.outputs.version-code }}'
+                echo '${{ steps.apk-info.outputs.version-name }}'
+                echo '${{ steps.apk-info.outputs.min-sdk-version }}'
+                echo '${{ steps.apk-info.outputs.target-sdk-version }}'
+                echo '${{ steps.apk-info.outputs.compile-sdk-version }}'
+                echo '${{ steps.apk-info.outputs.uses-permissions }}'
+                echo '${{ steps.apk-info.outputs.debuggable }}'
+                echo '${{ steps.apk-info.outputs.allow-backup }}'
+                echo '${{ steps.apk-info.outputs.supports-rtl }}'
+                echo '${{ steps.apk-info.outputs.file-size }}'
+                echo '${{ steps.apk-info.outputs.readable-file-size }}'
+    
+            # - name: Commit Changes
+            #   run: |
+            #       git config --global user.email "apk-artifacts-downloader@github.com"
+            #       git config --global user.name "${{ github.repository_owner }}"
+            #       git add .
+            #       git commit -m "Update ${{ env.repo-title }} to latest version"
 
-            - name: Push Changes
-              uses: ad-m/github-push-action@master
-              with:
-                  github_token: ${{ secrets.GITHUB_TOKEN }}
+            # - name: Push Changes
+            #   uses: ad-m/github-push-action@master
+            #   with:
+            #       github_token: ${{ secrets.GITHUB_TOKEN }}
 
-            - name: Delete Old Releases
-              run: |
-                  releases=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-                    -H "Accept: application/vnd.github.v3+json" \
-                    https://api.github.com/repos/${{ github.repository }}/releases | jq -r '.[] | .id' | sort -nr)
+            # - name: Delete Old Releases
+            #   run: |
+            #       releases=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            #         -H "Accept: application/vnd.github.v3+json" \
+            #         https://api.github.com/repos/${{ github.repository }}/releases | jq -r '.[] | .id' | sort -nr)
 
-                  for release in $releases; do
-                    curl -X DELETE -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-                      -H "Accept: application/vnd.github.v3+json" \
-                      https://api.github.com/repos/${{ github.repository }}/releases/$release
-                  done
-              if: ${{ env.status == 'success' }}
+            #       for release in $releases; do
+            #         curl -X DELETE -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            #           -H "Accept: application/vnd.github.v3+json" \
+            #           https://api.github.com/repos/${{ github.repository }}/releases/$release
+            #       done
+            #   if: ${{ env.status == 'success' }}
 
-            - name: Delete Old Tags
-              run: |
-                  tags=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-                    -H "Accept: application/vnd.github.v3+json" \
-                    https://api.github.com/repos/${{ github.repository }}/tags | jq -r '.[] | .name')
+            # - name: Delete Old Tags
+            #   run: |
+            #       tags=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            #         -H "Accept: application/vnd.github.v3+json" \
+            #         https://api.github.com/repos/${{ github.repository }}/tags | jq -r '.[] | .name')
 
-                  for tag in $tags; do
-                    curl -X DELETE -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-                      -H "Accept: application/vnd.github.v3+json" \
-                      https://api.github.com/repos/${{ github.repository }}/git/refs/tags/$tag
-                  done
-              if: ${{ env.status == 'success' }}
+            #       for tag in $tags; do
+            #         curl -X DELETE -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            #           -H "Accept: application/vnd.github.v3+json" \
+            #           https://api.github.com/repos/${{ github.repository }}/git/refs/tags/$tag
+            #       done
+            #   if: ${{ env.status == 'success' }}
 
-            - name: Publish Release
-              uses: softprops/action-gh-release@v2
-              if: ${{ env.status == 'success' }}
-              with:
-                  files: ./archive/*.apk
-                  tag_name: ${{ steps.apk-info.outputs.version-name }}
-                  name: ${{ env.workflow_name }}
-                  body_path: ./data/commit-log.txt
+            # - name: Publish Release
+            #   uses: softprops/action-gh-release@v2
+            #   if: ${{ env.status == 'success' }}
+            #   with:
+            #       files: ./archive/*.apk
+            #       tag_name: ${{ steps.apk-info.outputs.version-name }}
+            #       name: ${{ env.workflow_name }}
+            #       body_path: ./data/commit-log.txt
 
     rerun-workflow:
         name: Re-run workflow
