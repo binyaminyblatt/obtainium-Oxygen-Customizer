@@ -1,1 +1,1 @@
-{"commit-log":"- Fix wrong pref ~DHD2280","status":"success","elapsed-time":8920.73210294,"workflow":{"id":10516431577,"title":"Fix wrong pref"}}
+{"commit-log":"- Updated translations.\n\nMerge pull request #43 from DHD2280/beta-localization\r\nNew Crowdin translations by GitHub Action ~DHD2280\n- New Crowdin translations by GitHub Action ~Crowdin Bot","status":"success","elapsed-time":3203.902106432,"workflow":{"id":10539104875,"title":"Updated translations."}}
