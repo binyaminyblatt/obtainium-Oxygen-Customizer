@@ -1,1 +1,1 @@
-{"commit-log":"- Merge remote-tracking branch 'origin/beta' into beta ~DHD2280\n- Remove Screenshot Options ~DHD2280\n- Remove Screenshot Options ~DHD2280","status":"success","elapsed-time":1685.947720818,"workflow":{"id":10605014841,"title":"Merge remote-tracking branch 'origin/beta' into beta"}}
+{"commit-log":"- Updated Translations.\n\nMerge pull request #46 from DHD2280/beta-localization ~DHD2280\n- New Crowdin translations by GitHub Action ~Crowdin Bot","status":"success","elapsed-time":57.86367113,"workflow":{"id":10605034344,"title":"Updated Translations."}}
