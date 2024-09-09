@@ -1,1 +1,1 @@
-{"commit-log":"- Move from xhdpi to nodpi ~DHD2280","status":"success","elapsed-time":20582.898599067,"workflow":{"id":10766248294,"title":"Move from xhdpi to nodpi"}}
+{"commit-log":"- Revert AGP 8.6.0, return to 8.5.2 ~DHD2280\n- QsTileCustomization: when widget enabled don't touch media tile ~DHD2280","status":"success","elapsed-time":4333.981644827,"workflow":{"id":10782686907,"title":"Revert AGP 8.6.0, return to 8.5.2"}}
