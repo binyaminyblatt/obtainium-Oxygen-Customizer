@@ -1,1 +1,1 @@
-{"commit-log":"- Merge remote-tracking branch 'origin/beta' into beta ~DHD2280\n- CHANGELOG: Added Yandex Weather Provider ~DHD2280\n- CHANGELOG: Added Yandex Weather Provider ~DHD2280","status":"success","elapsed-time":9342.475912988,"workflow":{"id":10799563200,"title":"Merge remote-tracking branch 'origin/beta' into beta"}}
+{"commit-log":"- WeatherWork: getCurrentLocation as CompletableFuture ~DHD2280","status":"success","elapsed-time":58.453507796,"workflow":{"id":10799580693,"title":"WeatherWork: getCurrentLocation as CompletableFuture"}}
