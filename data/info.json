@@ -1,1 +1,1 @@
-{"commit-log":"- Added var to skip installation (internally used) ~DHD2280","status":"success","elapsed-time":1934.209906644,"workflow":{"id":10848236452,"title":"Added var to skip installation (internally used)"}}
+{"commit-log":"- SplashActivity: restore skip installation false ~DHD2280","status":"success","elapsed-time":151.835402051,"workflow":{"id":10848281342,"title":"SplashActivity: restore skip installation false"}}
