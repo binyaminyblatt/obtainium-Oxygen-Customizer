@@ -1,1 +1,1 @@
-{"commit-log":"- Hooks: use requireContext instead of getContext ~DHD2280","status":"success","elapsed-time":7668.669684211,"workflow":{"id":11017553292,"title":"Hooks: use requireContext instead of getContext"}}
+{"commit-log":"- Merge pull request #62 from DHD2280/beta-localization\n\nNew Crowdin translations by GitHub Action ~DHD2280\n- New Crowdin translations by GitHub Action ~Crowdin Bot","status":"success","elapsed-time":7524.158084397,"workflow":{"id":11019465357,"title":"Merge pull request #62 from DHD2280/beta-localization"}}
