@@ -1,1 +1,1 @@
-{"commit-log":"- Merge pull request #62 from DHD2280/beta-localization\n\nNew Crowdin translations by GitHub Action ~DHD2280\n- New Crowdin translations by GitHub Action ~Crowdin Bot","status":"success","elapsed-time":7524.158084397,"workflow":{"id":11019465357,"title":"Merge pull request #62 from DHD2280/beta-localization"}}
+{"commit-log":"- crowdin_upload bump action version ~DHD2280","status":"success","elapsed-time":224.555206576,"workflow":{"id":11019537011,"title":"crowdin_upload bump action version"}}
