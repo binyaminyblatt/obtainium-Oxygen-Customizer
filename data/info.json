@@ -1,1 +1,1 @@
-{"commit-log":"- ColorsFragment: hide dialog in onResume due to color change ~DHD2280","status":"success","elapsed-time":2670.900480269,"workflow":{"id":11149568519,"title":"ColorsFragment: hide dialog in onResume due to color change"}}
+{"commit-log":"- DeviceWidgetView: add a callback for theme change ~DHD2280","status":"success","elapsed-time":1.7134769300000001,"workflow":{"id":11149579076,"title":"DeviceWidgetView: add a callback for theme change"}}
