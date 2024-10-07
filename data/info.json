@@ -1,1 +1,1 @@
-{"commit-log":"- MemcEnabler: removed useless dump ~DHD2280","status":"success","elapsed-time":2121.442532305,"workflow":{"id":11208912717,"title":"MemcEnabler: removed useless dump"}}
+{"commit-log":"- MemcFragment: fix crashes on some devices. ~DHD2280","status":"success","elapsed-time":785.977435558,"workflow":{"id":11209044172,"title":"MemcFragment: fix crashes on some devices."}}
