@@ -1,1 +1,1 @@
-{"commit-log":"- makeBetaRelease.yml: zip artifact for telegram ~DHD2280\n- extractChanges.sh: more git log ~DHD2280\n- BETA Release ~DHD2280","status":"success","elapsed-time":217.224500203,"workflow":{"id":11299446348,"title":"makeBetaRelease.yml: zip artifact for telegram"}}
+{"commit-log":"- BETA Release ~DHD2280","status":"success","elapsed-time":2.22852565,"workflow":{"id":11299451162,"title":"BETA Release"}}
